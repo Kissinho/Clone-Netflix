@@ -1,0 +1,374 @@
+<div class="container-fluid">
+    <div class="row navega">
+        <div class="col-10">
+
+          <ul class="menu">
+            <li>
+                <img src="../../assets/Home/logo.png" alt="Logo da Netflix" width="120px" routerLink="/">
+
+              </li>
+                <li class="xe">Início</li>
+                <li class="xe">Séries</li>
+                <li class="xe">Filmes</li>
+                <li class="xe">Bombando</li>
+                <li class="xe">Minha lista</li>
+                <li class="xe">Navegar por idiomas</li>
+            </ul>
+        </div>
+
+        <div class="col-2 fa">
+          <ul class="menu icones">
+            <li>
+
+              <span class="lupa">
+                <img src="../../assets/Principal/lupa.png" alt="" width="25px">  
+              
+              </span>
+
+            </li>
+            <li>
+              
+              <span class="Campainha">
+
+                <img src="../../assets/Principal/campainha.png" alt="" width="30px">
+              </span>
+            </li>
+            <li>
+
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="../../assets/Perfis/blue.png" alt="" width="30px">
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#"><img src="../../assets/Perfis/red.png" alt="Imagem do perfil 1">Perfil 1</a></li>
+                  <li><a class="dropdown-item" href="#"><img src="../../assets/Perfis/blue.png" alt="Imagem do perfil 2">Perfil 2</a></li>
+                  <li><a class="dropdown-item" href="#"><img src="../../assets/Perfis/gray.png" alt="Imagem do perfil 3">Perfil 3</a></li>
+                  <li><a class="dropdown-item" href="#"><img src="../../assets/Perfis/yellow.png" alt="Imagem do perfil 4">Perfil 4</a></li>
+                  <li><a class="dropdown-item" href="#"><span><img src="../../assets/Principal/lapis.png" alt=""></span>Gerenciar perfis</a></li>
+                  <li><a class="dropdown-item" href="#"><span> <img src="../../assets/Principal/perfil.png" alt=""></span>Conta</a></li>
+                  <li><a class="dropdown-item" href="#"><span><img src="../../assets/Principal/interrogacao.png" alt=""></span>Central de Ajuda</a></li>
+
+               
+                  <li><a class="dropdown-item sair" href="#">Sair da Netflix</a></li>
+  
+                </ul>
+              </div>
+            </li>
+          </ul>
+                 
+        </div>
+        <div class="row">
+
+          <div class="col-3">
+            <h2>Com Amor, Victor</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 fa">
+
+            <button class="assistir"> <span><i class="fa-solid fa-play"></i></span> Assistir</button>
+            <button class="more"> <span> <img src="../../assets/Principal/circleinfo.png" alt="" width="25px"> </span> Mais informações</button>
+          </div>
+        </div>
+       
+    
+    </div>
+    
+
+
+   
+
+    <div class="row pr">
+      <h3>Filmes e séries</h3>
+      <div class="col-12">
+        
+        <div class="slide-container swiper">
+        
+            <div class="slide-content">
+              
+              <div class="card-wrapper swiper-wrapper">
+               
+              
+                <swiper
+                [slidesPerView]="1"
+                [centeredSlides]="false"
+                [slidesPerGroupSkip]="1"
+                [grabCursor]="true"
+                [keyboard]="{
+                  enabled: true
+                }"
+                [breakpoints]="{
+                  '769': {
+                    slidesPerView: 6,
+                    slidesPerGroup: 6
+                  }
+                }"
+                [scrollbar]="true"
+                [navigation]="true"
+                [pagination]="{
+                  clickable: true
+                }"
+                class="mySwiper"
+              >
+                <ng-template *ngFor="let img of resposta" swiperSlide class="foto"
+                  ><img src="{{img.image}}"
+                /></ng-template>
+             
+              </swiper>
+                
+              </div>
+            </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="row pr">
+      <h3>Lançado nos últimos 12 meses</h3>
+      <div class="col-12">
+        
+        <div class="slide-container swiper">
+        
+            <div class="slide-content">
+              
+              <div class="card-wrapper swiper-wrapper">
+               
+              
+                <swiper
+                [slidesPerView]="1"
+                [centeredSlides]="false"
+                [slidesPerGroupSkip]="1"
+                [grabCursor]="true"
+                [keyboard]="{
+                  enabled: true
+                }"
+                [breakpoints]="{
+                  '769': {
+                    slidesPerView: 6,
+                    slidesPerGroup: 6
+                  }
+                }"
+                [scrollbar]="true"
+                [navigation]="true"
+                [pagination]="{
+                  clickable: true
+                }"
+                class="mySwiper"
+              >
+                <ng-template *ngFor="let x of resultado" swiperSlide class="foto"
+                  ><img src="{{x.img_src}}"
+                /></ng-template>
+             
+              </swiper>
+                
+              </div>
+            </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+    
+    <div class="row pr">
+      <h3>Em alta</h3>
+      <div class="col-12">
+        
+        <div class="slide-container swiper">
+        
+            <div class="slide-content">
+              
+              <div class="card-wrapper swiper-wrapper">
+               
+              
+                <swiper
+                [slidesPerView]="1"
+                [centeredSlides]="false"
+                [slidesPerGroupSkip]="1"
+                [grabCursor]="true"
+                [keyboard]="{
+                  enabled: true
+                }"
+                [breakpoints]="{
+                  '769': {
+                    slidesPerView: 6,
+                    slidesPerGroup: 6
+                  }
+                }"
+                [scrollbar]="true"
+                [navigation]="true"
+                [pagination]="{
+                  clickable: true
+                }"
+                class="mySwiper"
+              >
+                <ng-template *ngFor="let x of nasa" swiperSlide class="foto"
+                  ><img src="{{x.img_src}}"
+                /></ng-template>
+             
+              </swiper>
+                
+              </div>
+            </div>
+
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row pr">
+      <h3>Populares na Netflix</h3>
+      <div class="col-12">
+        
+        <div class="slide-container swiper">
+        
+            <div class="slide-content">
+              
+              <div class="card-wrapper swiper-wrapper">
+               
+              
+                <swiper
+                [slidesPerView]="1"
+                [centeredSlides]="false"
+                [slidesPerGroupSkip]="1"
+                [grabCursor]="true"
+                [keyboard]="{
+                  enabled: true
+                }"
+                [breakpoints]="{
+                  '769': {
+                    slidesPerView: 6,
+                    slidesPerGroup: 6
+                  }
+                }"
+                [scrollbar]="true"
+                [navigation]="true"
+                [pagination]="{
+                  clickable: true
+                }"
+                class="mySwiper"
+              >
+                <ng-template *ngFor="let x of nasa2" swiperSlide class="foto"
+                  ><img src="{{x.img_src}}"
+                /></ng-template>
+             
+              </swiper>
+                
+              </div>
+            </div>
+
+
+        </div>
+
+      </div>
+    </div>
+    
+
+    
+    <div class="row pr ">
+      <h3>Adicionados recentemente</h3>
+      <div class="col-12">
+        
+        <div class="slide-container swiper lc">
+        
+            <div class="slide-content">
+              
+              <div class="card-wrapper swiper-wrapper">
+               
+              
+                <swiper
+                [slidesPerView]="1"
+                [centeredSlides]="false"
+                [slidesPerGroupSkip]="1"
+                [grabCursor]="true"
+                [keyboard]="{
+                  enabled: true
+                }"
+                [breakpoints]="{
+                  '769': {
+                    slidesPerView: 6,
+                    slidesPerGroup: 6
+                  }
+                }"
+                [scrollbar]="true"
+                [navigation]="true"
+                [pagination]="{
+                  clickable: true
+                }"
+                class="mySwiper"
+              >
+                <ng-template *ngFor="let x of nasa3" swiperSlide class="foto"
+                  ><img src="{{x.img_src}}" 
+                /></ng-template>
+             
+              </swiper>
+                
+              </div>
+            </div>
+
+
+        </div>
+
+      </div>
+    </div>
+    
+    
+
+
+</div>
+
+<footer>
+  <div class="row ft">
+    <div class="col-12 fa ic">
+      <span><i class="fa-brands fa-facebook-f ll"></i></span>
+      <span><i class="fa-brands fa-instagram ll"></i></span>
+      <span><i class="fa-brands fa-twitter ll"></i></span>
+      <span><i class="fa-brands fa-youtube ll"></i></span>
+      </div>
+      </div>
+
+
+      <div class="row ft">
+        <div class="col-3">
+          <ul>
+            <li>Audiodescrição</li>
+            <li>Relações com investidores</li>
+            <li>Avisos legais</li>
+            <li><Button>Código do serviço</Button></li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <ul>
+            <li>Central de Ajuda</li>
+            <li>Carreiras</li>
+            <li>Preferências de cookies</li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <ul>
+            <li>Cartão pré-pago</li>
+            <li>Termos de Uso</li>
+            <li>Informações corporativas</li>
+          </ul>
+        </div>
+        <div class="col-3">
+          <ul>
+            <li>Imprensa</li>
+            <li>Privacidade</li>
+            <li>Entre em contato</li>
+          </ul>
+        </div>
+  </div>
+  <div class="row">
+    <div class="col-12 legais">
+      ©1997-2022 Netflix, Inc.
+    </div>
+  </div>
+</footer>
